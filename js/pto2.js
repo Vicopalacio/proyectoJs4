@@ -2,11 +2,9 @@ const cuenta = {
     titular: "Alex",
     saldo: 0,
     ingresar(montoIngresar){
-        //toda la logica para agregar dinero a la cuenta
-        this.saldo += montoIngresar; //this.saldo = this.saldo + montoIngresar;
+        this.saldo += montoIngresar;
     },
     extraer(montoExtraer){
-        //toda la logica para extraer dinero de la cuenta
         if(this.saldo >= montoExtraer){
             this.saldo -= montoExtraer;
         }else{
