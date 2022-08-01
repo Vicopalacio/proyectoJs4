@@ -67,12 +67,6 @@ if(libro1._numeroPaginas < libro2._numeroPaginas){
     document.write(`El libro ${libro1._titulo} es el que tiene mas paginas`)
 }else{document.write(`El libro ${libro1._titulo} tiene las mismas paginas que el libro ${libro2._titulo}`)}
 
-// libro1.modificarIsbn = 5976822541036;
-// libro1.modificarTitulo = "La tregua";
-// libro1.modificarAutor = "Mario Benedetti";
-// libro1.numeroPaginas = 300;
-
-// libro1.mostrarLibro();
 
 
 
