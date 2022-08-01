@@ -18,59 +18,65 @@ class Libro {
         this._autor = autor;
         this._numeroPaginas = numeroPaginas;
     }
-
-    get isbn (){
+    
+    set modificarIsbn (nuevoCodigo){
+        this._codigo = nuevoCodigo;
+    }
+    get mostrarIsbn (){
         return this._codigo;
     }
-    get titulo (){
+
+    set modificarTitulo (nuevoTitulo){
+        this._titulo = nuevoTitulo;
+    }
+    get mostrarTitulo (){
         return this._titulo;
     }
-    get autor (){
+
+    set modificarAutor (nuevoAutor){
+        this._autor = nuevoAutor;
+    }
+    get mostrarAutor (){
         return this._autor;
     }
-    get numeroPaginas (){
+
+    set numeroPaginas (nuevoNum){
+        this._numeroPaginas = nuevoNum;
+    }
+    get mostrarNumPaginas (){
         return this._numeroPaginas;
     }
-
-    set isbn (cod){
-        this._codigo = cod;
-    }
-    set titulo (tit){
-        this._titulo = tit;
-    }
-    set autor (au){
-        this._autor = au;
-    }
-    set numeroPaginas (num){
-        this._numeroPaginas = num;
-    }
-
+    
     mostrarLibro(){
-    document.write(`<br> El libro ${this.titulo} con USBN ${this.codigo} creado por el autor ${this.autor} tiene el numero de paginas ${this.numeroPaginas}<br>`)
-    }
-
-    // paginas(){
-    //     if (pagina1 > pagina2){
-    //         document.write ("El psicoanalista tiene más páginas")
-    //     }else{document.write ("La tregua tiene más paginas")}
-    // }
+    document.write(`<br> El libro ${this._titulo} con USBN ${this._codigo} creado por el autor ${this._autor} tiene el numero de paginas ${this._numeroPaginas}.<br>`)
+    }  
 }
 
-let libro1 = new Libro (9743662501456, "El psicoanalista", "John Katzenbach",500)
-libro1.codigo = 9743662501456;
-libro1.titulo = "El psicoanalista";
-libro1.autor = "John Katzenbach";
-libro1.numeroPaginas = 522;
-
-libro1.mostrarLibro();
+let libro1 = new Libro(9743662501456, "El psicoanalista", "John Katzenbach",500);
 
 let libro2 = new Libro (5976822541036, "La tregua", "Mario Benedetti", 300)
-libro2.codigo = 5976822541036;
-libro2.titulo = "La tregua";
-libro2.autor = "Mario Benedetti";
-libro2.numeroPaginas = 300;
 
+
+libro1.mostrarLibro();
 libro2.mostrarLibro();
+
+
+if(libro1._numeroPaginas < libro2._numeroPaginas){
+    document.write(`El libro ${libro2._titulo} es el que tiene mas paginas`)
+}else if (libro1._numeroPaginas > libro2._numeroPaginas){
+    document.write(`El libro ${libro1._titulo} es el que tiene mas paginas`)
+}else{document.write(`El libro ${libro1._titulo} tiene las mismas paginas que el libro ${libro2._titulo}`)}
+
+// libro1.modificarIsbn = 5976822541036;
+// libro1.modificarTitulo = "La tregua";
+// libro1.modificarAutor = "Mario Benedetti";
+// libro1.numeroPaginas = 300;
+
+// libro1.mostrarLibro();
+
+
+
+
 
 
 
